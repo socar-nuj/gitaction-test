@@ -1,6 +1,6 @@
 FROM python:3.8.7-slim-buster as builder
 WORKDIR /app
-COPY . .
+COPY ./mkdocs/ .
 RUN ls
 RUN pwd
 RUN pip install mkdocs-material
