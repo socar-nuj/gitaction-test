@@ -6,4 +6,4 @@ RUN mkdocs build
 
 FROM nginx:latest as deploy
 COPY --from=builder /app/site /usr/share/nginx/html/
-COPY ./nginx.conf /etc/nginx/conf.d
+COPY mkdocs/nginx.conf /etc/nginx/conf.d
