@@ -30,7 +30,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./mkdocs
           push: true
-          file: ./mkdocs/Dockerfile
+          file: ./Dockerfile
           tags: ${{ steps.meta.outputs.tags }}
